@@ -1,6 +1,6 @@
 #!/bin/bash
 
-defaultBuildId=spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+defaultBuildId=spring-petclinic-3.5.0-SNAPSHOT.jar
 buildId=${1:-$defaultBuildId}
 
 echo "update outdates packages and wait 30 seconds";
@@ -23,7 +23,7 @@ echo "This is the COPY COMMAND:";
 echo "cp \"$buildId\" /var/lib/tomcat9/webapps/"
 cp $buildId /home/ubuntu
 echo "Change ownership so it can be started by the process"
-sudo chown ubuntu:ubuntu spring-petclinic-2.1.0.BUILD-SNAPSHOT.jar
+sudo chown ubuntu:ubuntu spring-petclinic-3.5.0-SNAPSHOT.jar
 
 echo "installing petclinic services to run petclinic as service so it starts automatically"
 sudo cp petclinic.sh /usr/local/bin/
