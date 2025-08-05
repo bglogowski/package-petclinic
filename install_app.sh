@@ -5,17 +5,17 @@ buildId=${1:-$defaultBuildId}
 
 echo "update outdates packages and wait 30 seconds";
 sudo apt-get update
-sleep 30s
+#sleep 30s
 
 echo "install java and wait 30 seconds";
-sudo apt install -y openjdk-11-jre-headless
-sleep 30s
+sudo apt-get install -y openjdk-17-jre-headless
+#sleep 30s
 
 echo "Verifying java was installed";
 java --version
 
 # Install software application
-echo "Installing software application form /tmp"
+echo "Installing software application from /tmp"
 cd /tmp
 pwd
 ls -l
