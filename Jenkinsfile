@@ -45,7 +45,8 @@ pipeline  {
            this_version = props.Version;
            this_artifact = props.ArtifactId;
            this_full_build_id = props.FullBuildId; 
-           this_jenkins_build_id = props.JenkinsBuildId; 
+           # this_jenkins_build_id = props.JenkinsBuildId; 
+           this_jenkins_build_id = env.BUILD_ID; 
         }
 
 
